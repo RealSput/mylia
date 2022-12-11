@@ -13,13 +13,12 @@ class test {
     }
     classify() {
         let nn = mod('neuralnet');
-        const net = new brain.recurrent.LSTMTimeStep({
+        const net = new nn.recurrent.LSTMTimeStep({
             inputSize: 2,
             hiddenLayers: [10],
             outputSize: 2,
         });
 
-        // Same test as previous, but combined on a single set
         const trainingData = [
             [
                 [1, 5],
@@ -34,7 +33,6 @@ class test {
             errorThresh: 0.09
         });
 
-        // now we're cookin' with gas!
         const forecast = net.forecast(
             [
                 [1, 5],
