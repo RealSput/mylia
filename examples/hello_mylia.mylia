@@ -1,0 +1,9 @@
+class hello_mylia {
+  hello() {
+    parentPort.postMessage('Hello, ' + args[0] + '!');
+  }
+  main() {
+    let hello = hello('Mylia');
+    hello.on('message', console.log);
+  }
+}
