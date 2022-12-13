@@ -1,0 +1,30 @@
+class test {
+    render() {
+        const graphics = require('3dg');
+        const Graphics = new graphics(512, 512);
+
+        const camera = new Graphics.PerspectiveCamera(75, 512 / 512, 0.1, 1000);
+        const geometry = new Graphics.BoxGeometry(1, 1, 1);
+        const material = new Graphics.MeshBasicMaterial({
+            color: 0x00ff00
+        });
+        const cube = new Graphics.Mesh(geometry, material);
+        Graphics.scene.add(cube);
+
+        camera.position.z = 5;
+
+            cube.rotation.x += Math.floor(Math.random() * 50);
+            cube.rotation.y += Math.floor(Math.random() * 50);
+            Graphics.renderer.render(Graphics.scene, camera);
+    
+        update();
+        parentPort.postMessage(Graphics.image.toDataURL());
+    }
+    main() {
+        let renderer = render();
+        renderer.on('message', function(dataURL) {
+            // prints the DataURL for the 3D image
+            console.log(dataURL);
+        });
+    }
+}
