@@ -12,46 +12,14 @@ The only difference from JS is that instead of having to call `this.function()` 
 
 # Example
 ```js
-class test {
-    main() {
-        let thread = classify('Code');
-        // result: c
-        thread.on('message', (m) => {
-            console.log('String classified as: ' + m);
-        })
-    }
-    classify() {
-        let nn = mod('neuralnet');
-        const net = new nn.recurrent.LSTMTimeStep({
-            inputSize: 2,
-            hiddenLayers: [10],
-            outputSize: 2,
-        });
-
-        const trainingData = [
-            [
-                [1, 5],
-                [2, 4],
-                [3, 3],
-                [4, 2],
-                [5, 1],
-            ],
-        ];
-
-        net.train(trainingData, {
-            errorThresh: 0.09
-        });
-
-        const forecast = net.forecast(
-            [
-                [1, 5],
-                [2, 4],
-            ],
-            3
-        );
-
-        parentPort.postMessage(output);
-    }
+class hello_mylia {
+  hello() {
+    parentPort.postMessage('Hello, ' + args[0] + '!');
+  }
+  main() {
+    let hello = hello('Mylia');
+    hello.on('message', console.log);
+  }
 }
 ```
 More examples can be found in the [examples](https://github.com/RealSput/mylia/tree/main/examples) folder.
