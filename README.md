@@ -54,3 +54,8 @@ class test {
     }
 }
 ```
+More examples can be found in the [examples](https://github.com/RealSput/mylia/tree/main/examples) folder.
+
+# Contributing
+The Mylia project welcomes (and encourages) contributions! We welcome anything, from bug fixes and broken dependencies, to enhancements and more examples. 
+For more info, see [CONTRIBUTING.md](https://github.com/RealSput/mylia/blob/main/CONTRIBUTING.md).
