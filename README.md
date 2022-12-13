@@ -22,7 +22,7 @@ class hello_mylia {
   }
 }
 ```
-More examples can be found in the [examples](https://github.com/RealSput/mylia/tree/main/examples) folder.
+More examples can be found in the [examples](https://github.com/RealSput/mylia/tree/main/examples/code) folder.
 
 # Contributing
 The Mylia project welcomes (and encourages) contributions! We welcome anything, from bug fixes and broken dependencies, to enhancements and more examples. 
